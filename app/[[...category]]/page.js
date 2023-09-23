@@ -8,7 +8,7 @@ async function delay(ms) {
 export default async function HomePage({ params }) {
     await delay(5000)
 
-    // console.log(params)
+    console.log(params)
     let selectedCategory;
 
     if(params.category?.length > 0){
@@ -23,6 +23,7 @@ export default async function HomePage({ params }) {
             ) : "",
         }}
     />
+
   )
 }
 

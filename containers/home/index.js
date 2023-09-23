@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+
 import Movies from "@/mocks/movies.json"
 import Genres from '@/mocks/genres.json'
 import FeaturedMovie from '@/components/featured-movie/FeaturedMovie'
@@ -6,7 +8,7 @@ import Categories from '@/components/categories/Categories'
 import MoviesSection from '@/components/movies-section/MoviesSection'
 
 const HomeContainer = ( { selectedCategory }) => {
-  console.log(selectedCategory)
+  // console.log(selectedCategory)
 
   return (
     <div className='space-y-10'>
