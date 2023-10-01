@@ -6,6 +6,7 @@ import {
   getSingleCategory} from "@/services/movie"
 
 
+
 export default async function HomePage({ params }) {
   let selectedCategoryMovies;
 
@@ -19,6 +20,7 @@ export default async function HomePage({ params }) {
         const { results } = await getSingleCategory(params.category[0])
         selectedCategoryMovies = results
     }  
+    
   return (
     <HomeContainer 
     topRatedMoviesData = { topRatedMoviesData }

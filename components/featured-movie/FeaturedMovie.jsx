@@ -5,10 +5,12 @@ import styles from "./styles.module.css"
 
 
 const FeaturedMovie = ( {movie = {}, isCompact = true}) => {
-const { poster_path, title, overview} = movie
+
+const { poster_path, title, overview, name = ""} = movie
 return (
     <div className="flex flex-col justify-center space-y-5">
       <h1 className="font-bold text-4xl sm:text-8xl uppercase ">{title}</h1>
+      <h1 className="font-bold text-4xl sm:text-8xl uppercase ">{name}</h1>
       <p
         className={`text-sm sm:text-lg ${
           isCompact ? styles.shortOverview : ""
@@ -17,7 +19,7 @@ return (
         {overview}
       </p>
       <div className={styles.actionButtons}>
-        <Link className={styles.playButton} href={`/movie/${movie.id}`}>
+        <Link className={styles.playButton} href={`/`}>
           Play
         </Link>
         <button className={styles.addButton}>

@@ -16,6 +16,8 @@ const fetchMovieAPI = async (pathname , query = "") => {
   }
 }
 
+
+
 const getTopRatedMovies = async () => {
   return fetchMovieAPI("/movie/top_rated", "language=en-US&page=1")
 }
@@ -35,7 +37,8 @@ const getSingleCategory = async (genreId) => {
 const getMovieDetails = async (movieId) => {
   return fetchMovieAPI(`/movie/${movieId}`,"language=en-US")
 }
-  
+
+
 
 export { fetchMovieAPI,
   getTopRatedMovies,

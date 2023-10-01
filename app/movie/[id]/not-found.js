@@ -9,7 +9,7 @@ export default function NotFound() {
   return (
     <div className={styles.pageContainer}>
       <h2>Ups...</h2>
-      <p>We couldn't find the movie you are looking for!</p>
+      <p>We couldnt find the movie you are looking for!</p>
       <Link href="/" className={styles.button}>Return Home</Link>
 
     </div>

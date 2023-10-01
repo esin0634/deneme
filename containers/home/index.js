@@ -11,7 +11,7 @@ function getRandomInt(min, max) {
 }
 
 const randomNum = getRandomInt(1,20); 
-console.log(randomNum)
+
 
  const styles = {
   pageContainer : `space-y-10 w-max-screen flex flex-col items-center justify-center`,
