@@ -1,22 +1,17 @@
 import React from 'react'
 import MovieContainer from '@/containers/movie'
-import Movies from "@/mocks/movies.json"
 import { notFound } from "next/navigation"
+import { getMovieDetails } from '@/services/movie'
 
-async function delay(ms) {
-  return new Promise((resolve)=> setTimeout(resolve,ms))
-}
-async function MoviePage ({ params, searchParams }){
-  await delay(2000)
+
+async function MoviePage ({ params }){
   
-  const movieDetail = Movies.results.find(movie => movie.id.toString() === params.id)
-
-  if (!movieDetail){
-    notFound(); 
-  }
-  if (searchParams.error === "true"){
-    throw new Error("Error happened")
-  }
+  const movieDetail = await getMovieDetails(params.id)
+  
+  if ('success' in movieDetail && movieDetail.success === false){
+    notFound();  
+  } 
+   
   return (
     <MovieContainer movie={movieDetail} />
   )
