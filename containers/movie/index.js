@@ -3,9 +3,8 @@ import React from 'react'
 
 const MovieContainer = ({ movie }) => {
   return (
-    <div className='h-screen flex items-center'>
+    <div className='h-screen flex items-center justify-center'>
       <FeaturedMovie movie={movie} isCompact={false} />
-
     </div>
   )
 }

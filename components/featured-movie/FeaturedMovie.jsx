@@ -7,10 +7,10 @@ import styles from "./styles.module.css"
 const FeaturedMovie = ( {movie = {}, isCompact = true}) => {
 const { poster_path, title, overview} = movie
 return (
-    <div className="p-10 sm:px-72 space-y-5">
+    <div className="flex flex-col justify-center space-y-5">
       <h1 className="font-bold text-4xl sm:text-8xl uppercase ">{title}</h1>
       <p
-        className={` ${
+        className={`text-sm sm:text-lg ${
           isCompact ? styles.shortOverview : ""
         }`}
       >
